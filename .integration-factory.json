@@ -1,41 +1,62 @@
 {
   "schemaVersion": 1,
-  "status": "ready",
-  "verification": "mock-only",
-  "releaseEligible": true,
-  "maintainer": "jannikco",
-  "license": "MIT",
-  "sourceRevision": "92ac7267e9b85998843e16862b2715ce9155e9ea3fee22895e05020d69983575",
-  "evidence": [
-    "Source-backed provider setup metadata",
-    "Offline configuration and MCP protocol tests"
-  ],
-  "provenance": [
-    "https://raw.githubusercontent.com/GoHighLevel/highlevel-api-docs/main/apps/contacts.json"
-  ],
   "id": "aesthetix-crm-mcp",
   "kind": "mcp-setup",
   "product": "pipmcp",
   "title": "Aesthetix CRM MCP setup and connection checker",
-  "description": "Generate Aesthetix CRM MCP client configuration, inspect available tools and validate hosted endpoint access through PipMCP.",
+  "description": "Prepare Aesthetix CRM for AI workflows with a PipMCP setup doctor, authenticated discovery and coding-agent instructions.",
+  "status": "ready",
+  "verification": "mock-only",
+  "releaseEligible": false,
   "operationIds": [],
+  "maintainer": "jannikco",
+  "license": "MIT",
+  "attributionSlug": "github-aesthetix-crm-mcp",
+  "sourceRevision": "6961ea3c6c153d6c87ed8e0521429419b5a6c267f88d9ffbfbd0724de5aab650",
+  "qualityVersion": 2,
+  "artifactType": "setup",
+  "evidence": [
+    "Gateway HTTP transport fixtures",
+    "Generated stdio wrapper discovery/call fixtures"
+  ],
+  "provenance": [
+    "https://raw.githubusercontent.com/GoHighLevel/highlevel-api-docs/main/apps/contacts.json"
+  ],
+  "utility": {
+    "problem": "Prepare Aesthetix CRM and inspect your hosted setup",
+    "output": "Offline setup plan and authenticated discovery diagnostics"
+  },
   "appSlug": "aesthetix-crm",
   "appName": "Aesthetix CRM",
-  "providerDocs": "https://raw.githubusercontent.com/GoHighLevel/highlevel-api-docs/main/apps/contacts.json",
-  "providerWebsite": "https://aesthetixcrm.com/",
-  "authentication": {
-    "type": "bearer",
-    "requiredCredentialFields": [
-      "token"
-    ],
-    "requiredHeaderNames": [],
-    "helpUrl": "https://marketplace.gohighlevel.com/docs/Authorization/PrivateIntegrationsToken",
-    "tenantRequired": false,
-    "accountParameterNames": [
-      "location_id"
-    ]
+  "maintenanceOnly": true,
+  "executionAuthority": "pipmcp-gateway",
+  "version": "1.0.0",
+  "agentReady": true,
+  "capabilityEvidence": {
+    "local": {
+      "level": "Tested",
+      "operations": [
+        {
+          "name": "gateway_transport",
+          "level": "Tested",
+          "method": "contract-fixture",
+          "evidenceRefs": [
+            "Generated gateway/stdio fixtures"
+          ]
+        }
+      ],
+      "evidenceRefs": [
+        "Generated gateway/stdio fixtures"
+      ],
+      "mode": "local"
+    },
+    "managed": {
+      "level": "Documented",
+      "operations": [],
+      "evidenceRefs": [],
+      "mode": "managed"
+    }
   },
-  "attributionSlug": "github-aesthetix-crm-mcp",
   "factory": "leadadapter-pipmcp",
-  "generatorVersion": 1
+  "generatorVersion": 3
 }
